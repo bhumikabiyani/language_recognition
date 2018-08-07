@@ -147,40 +147,6 @@
           runNetwork(deepNetwork.getSingleton(), word);
         }
       }
-<<<<<<< HEAD
-      console.log(trainingData);
-      return trainingData;
-
-    }
-
-    function createDeepNetwork() {
-      var myDeepNetwork = new synaptic.Architect.Perceptron(
-        161, // Input layer with  neurons
-        3, // First hidden layer with 3 neurons
-        3, // Second hidden layer with 3 neurons
-        2 // Output layer with 2 neurons
-      );
-      return myDeepNetwork;
-    }
-
-    function trainingNetwork(myDeepNetwork, trainingData) {
-      var myTrainer = new synaptic.Trainer(myDeepNetwork); // Create trainer
-      myTrainer.train(trainingData, {
-          rate: 0.01,
-          iterations: 10000,
-          shuffle: true
-      }); // Train with training data
-    }
-
-    function runNetwork(myDeepNetwork, word) {
-      var cWord = convertToBinaryArray(word);
-      var recommendations = myDeepNetwork.activate(cWord);
-      console.log('Word: '+word);
-      console.log('Español: '+recommendations[0] * 100+'%');
-      console.log('English: '+recommendations[1] * 100+'%');
-    }
-=======
->>>>>>> master
 
       $('#suggest').on('click', function (obj) {
         var text = $('#word').val();
